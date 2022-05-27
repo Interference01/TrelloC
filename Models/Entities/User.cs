@@ -16,5 +16,7 @@ namespace TrelloC.Models.Entities
         [Required]
         public string Password { get; set; }
 
+        [JsonIgnore]
+        public List<RefreshToken> RefreshTokens { get; set; }
     }
 }
