@@ -38,19 +38,6 @@ using (var scope = app.Services.CreateScope())
     var dataContext = scope.ServiceProvider.GetRequiredService<DataContext>();
     dataContext.Database.Migrate();
 }
-using (var scope = app.Services.CreateScope())
-{
-    var context = scope.ServiceProvider.GetRequiredService<DataContext>();
-    var testUser = new User
-    {
-        Login = "Test",
-        Name = "User",
-        Email = "test",
-        Password = BCrypt.Net.BCrypt.HashPassword("test")
-    };
-    context.Users.Add(testUser);
-    context.SaveChanges();
-}
 
 app.UseHttpsRedirection();
 // global cors policy
