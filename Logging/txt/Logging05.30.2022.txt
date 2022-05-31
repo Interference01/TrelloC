@@ -1,0 +1,22 @@
+REQUEST 
+30.05.2022 17:30:37 
+URL: /Users/authenticate 
+Method: POST 
+User-Agent: PostmanRuntime/7.29.0 
+Body: System.IO.Pipelines.StreamPipeReader 
+RESPONSE 
+StatusCode: 200 
+ContentType: application/json; charset=utf-8 
+Body: System.IO.Pipelines.StreamPipeWriter 
+----------------------------------------
+REQUEST 
+30.05.2022 17:34:04 
+URL: /Users/authenticate 
+Method: POST 
+User-Agent: PostmanRuntime/7.29.0 
+Body: System.IO.Pipelines.StreamPipeReader 
+RESPONSE 
+StatusCode: 200 
+ContentType: application/json; charset=utf-8 
+Body: System.IO.Pipelines.StreamPipeWriter 
+----------------------------------------

@@ -1,8 +1,9 @@
 ﻿using Microsoft.Extensions.Options;
+using TrelloC.Authorization;
 using TrelloC.Helpers;
 using TrelloC.Services;
 
-namespace TrelloC.Authorization
+namespace TrelloC.Middlewares
 {
     public class JwtMiddleware
     {

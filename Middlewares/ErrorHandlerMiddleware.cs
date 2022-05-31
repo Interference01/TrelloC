@@ -1,7 +1,8 @@
 ﻿using System.Net;
 using System.Text.Json;
+using TrelloC.Helpers;
 
-namespace TrelloC.Helpers
+namespace TrelloC.Middlewares
 {
     public class ErrorHandlerMiddleware
     {
@@ -11,14 +12,14 @@ namespace TrelloC.Helpers
         {
             _next = next;
         }
-        
+
         public async Task Invoke(HttpContext context)
         {
             try
             {
                 await _next(context);
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 var response = context.Response;
                 response.ContentType = "application/json";
@@ -29,11 +30,11 @@ namespace TrelloC.Helpers
                         //custom application error
                         response.StatusCode = (int)HttpStatusCode.BadRequest;
                         break;
-                        case KeyNotFoundException e:
+                    case KeyNotFoundException e:
                         //not found error
                         response.StatusCode = (int)HttpStatusCode.NotFound;
                         break;
-                        default:
+                    default:
                         //unhandled error
                         response.StatusCode = (int)HttpStatusCode.InternalServerError;
                         break;
