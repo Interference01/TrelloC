@@ -20,17 +20,6 @@ namespace TrelloC.Middlewares
             {
                 logger.Log(context);
             }
-            //if (_logSettings.LogToConsole)
-            //{
-            //    _logs.Last().Log(context);
-
-            //}
-            //if (_logSettings.LogToFile)
-            //{
-            //    _logs.First().Log(context);
-
-            //}
-
         }
     }
 }

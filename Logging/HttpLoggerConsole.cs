@@ -6,18 +6,14 @@ namespace TrelloC.Logging
 
     public class HttpLoggerConsole : HttpLoggerBase
     {
-        private LoggingCustomSettings _settings;
-        public HttpLoggerConsole(IOptions<LoggingCustomSettings> settings)
-        {
-            _settings = settings.Value;
-        }
 
-        public override void Log(HttpContext context)
+        public HttpLoggerConsole(IOptions<LoggingCustomSettings> settings) : base(settings)
         {
-            if (_settings.LogToConsole)
-            {
-                Console.WriteLine(GetRequestInfo(context.Request) + GetResposeInfo(context.Response));
-            }
+        }
+        protected override string EnableSettingName => "LogToConsole";
+        protected override void LogExecuting(HttpContext context)
+        {
+            Console.WriteLine(GetRequestInfo(context.Request) + GetResposeInfo(context.Response));
         }
     }
 }

@@ -29,7 +29,7 @@ namespace TrelloC.Controllers
         [HttpPost("refresh-token")]
         public IActionResult RevokeToken(RevokeTokenRequest model)
         {
-            // accept refresh token in request body or cookie
+            // accept refresh token in request body or cookie - принять токен обновления в теле запроса или файле cookie
             var token = model.Token ?? Request.Cookies["refreshToken"];
 
             if (string.IsNullOrEmpty(token))
@@ -57,7 +57,7 @@ namespace TrelloC.Controllers
 
         private void setTokenCookie(string token)
         {
-            // apend cookie eith refresh token to the http response
+            // apend cookie eith refresh token to the http response -добавить файл cookie с токеном обновления в ответ http
             var cookieOptions = new CookieOptions
             {
                 HttpOnly = true,

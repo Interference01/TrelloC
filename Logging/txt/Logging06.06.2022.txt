@@ -1,0 +1,101 @@
+REQUEST 
+06.06.2022 14:41:27 
+URL: /Users/authenticate 
+Method: POST 
+Body: System.IO.Pipelines.StreamPipeReader 
+Accept:  */*
+Accept-Encoding:  gzip, deflate, br
+Connection:  keep-alive
+Content-Length:  47
+Content-Type:  application/json
+Cookie:  refreshToken=bp5dS5KxNVswVF%2F67t%2FBJK2WIWuBQng585TVXj1%2Fk2EI%2B6z3UPM%2FVrpRFftdlJ9mNPlqJiSphvLyNiy2wEdAJg%3D%3D
+Host:  localhost:44395
+User-Agent:  PostmanRuntime/7.29.0
+Postman-Token:  2c79f93b-72c8-4909-a8c4-9dd5a49a3399
+RESPONSE 
+StatusCode: 400 
+ContentType: application/json 
+Body: System.IO.Pipelines.StreamPipeWriter 
+Content-Type:  application/json
+----------------------------------------
+REQUEST 
+06.06.2022 15:30:12 
+URL: /Users/authenticate 
+Method: POST 
+Body: System.IO.Pipelines.StreamPipeReader 
+Accept:  */*
+Accept-Encoding:  gzip, deflate, br
+Connection:  keep-alive
+Content-Length:  46
+Content-Type:  application/json
+Cookie:  refreshToken=bp5dS5KxNVswVF%2F67t%2FBJK2WIWuBQng585TVXj1%2Fk2EI%2B6z3UPM%2FVrpRFftdlJ9mNPlqJiSphvLyNiy2wEdAJg%3D%3D
+Host:  localhost:44395
+User-Agent:  PostmanRuntime/7.29.0
+Postman-Token:  5a613198-14a6-44a4-bd7a-e9ebed4575d0
+RESPONSE 
+StatusCode: 200 
+ContentType: application/json; charset=utf-8 
+Body: System.IO.Pipelines.StreamPipeWriter 
+Set-Cookie:  refreshToken=%2BYC%2FnRLRukS%2BAa84o5a4%2B%2FPzTBlTg5NwLEQNHMQ0YFqdKxHYSGr1SV0ocUAKlzpyI8NbJANeGeFtbiCBdBtWYg%3D%3D; expires=Mon, 13 Jun 2022 12:29:43 GMT; path=/; httponly
+Content-Type:  application/json; charset=utf-8
+----------------------------------------
+REQUEST 
+06.06.2022 15:37:12 
+URL: /Users/refresh-token 
+Method: POST 
+Body: System.IO.Pipelines.StreamPipeReader 
+Accept:  */*
+Accept-Encoding:  gzip, deflate, br
+Connection:  keep-alive
+Content-Length:  231
+Content-Type:  application/json
+Cookie:  refreshToken=%2BYC%2FnRLRukS%2BAa84o5a4%2B%2FPzTBlTg5NwLEQNHMQ0YFqdKxHYSGr1SV0ocUAKlzpyI8NbJANeGeFtbiCBdBtWYg%3D%3D
+Host:  localhost:44395
+User-Agent:  PostmanRuntime/7.29.0
+Postman-Token:  4553211b-ee7a-4b9a-8f48-d5130688cbe4
+RESPONSE 
+StatusCode: 400 
+ContentType: application/json 
+Body: System.IO.Pipelines.StreamPipeWriter 
+Content-Type:  application/json
+----------------------------------------
+REQUEST 
+06.06.2022 15:43:31 
+URL: /Users/refresh-token 
+Method: POST 
+Body: System.IO.Pipelines.StreamPipeReader 
+Accept:  */*
+Accept-Encoding:  gzip, deflate, br
+Connection:  keep-alive
+Content-Length:  231
+Content-Type:  application/json
+Cookie:  refreshToken=%2BYC%2FnRLRukS%2BAa84o5a4%2B%2FPzTBlTg5NwLEQNHMQ0YFqdKxHYSGr1SV0ocUAKlzpyI8NbJANeGeFtbiCBdBtWYg%3D%3D
+Host:  localhost:44395
+User-Agent:  PostmanRuntime/7.29.0
+Postman-Token:  875bb44c-c882-4b9b-8149-0d327c82ab87
+RESPONSE 
+StatusCode: 400 
+ContentType: application/json 
+Body: System.IO.Pipelines.StreamPipeWriter 
+Content-Type:  application/json
+----------------------------------------
+REQUEST 
+06.06.2022 15:50:25 
+URL: /Users/refresh-token 
+Method: POST 
+Body: System.IO.Pipelines.StreamPipeReader 
+Accept:  */*
+Accept-Encoding:  gzip, deflate, br
+Connection:  keep-alive
+Content-Length:  22
+Content-Type:  application/json
+Cookie:  refreshToken=%2BYC%2FnRLRukS%2BAa84o5a4%2B%2FPzTBlTg5NwLEQNHMQ0YFqdKxHYSGr1SV0ocUAKlzpyI8NbJANeGeFtbiCBdBtWYg%3D%3D
+Host:  localhost:44395
+User-Agent:  PostmanRuntime/7.29.0
+Postman-Token:  2d8ac8fc-417d-4bf3-8203-ade9d1a285c0
+RESPONSE 
+StatusCode: 400 
+ContentType: application/json; charset=utf-8 
+Body: System.IO.Pipelines.StreamPipeWriter 
+Content-Type:  application/json; charset=utf-8
+----------------------------------------

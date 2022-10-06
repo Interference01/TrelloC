@@ -40,7 +40,7 @@ namespace TrelloC.Authorization
                 Expires = DateTime.UtcNow.AddMinutes(15),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
-            var token = tokenHandler.CreateToken(tokenDescriptor);
+            var token = tokenHandler.CreateToken(tokenDescriptor); 
             return tokenHandler.WriteToken(token);
         }
 
@@ -50,7 +50,7 @@ namespace TrelloC.Authorization
                 return null;
 
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
+            var key = Encoding.ASCII.GetBytes(_appSettings.Secret); // что тут происходит SECRET
             try
             {
                 tokenHandler.ValidateToken(token, new TokenValidationParameters
@@ -61,7 +61,7 @@ namespace TrelloC.Authorization
                     ValidateAudience = false,
                     // set clockshew to zero so tokens expire exactly at token expiration time (instead of 5 minutes later)
                     ClockSkew = TimeSpan.Zero
-                }, out SecurityToken validatedToken);
+                }, out SecurityToken validatedToken); // оператор OUT ?
 
                 var jwtToken = (JwtSecurityToken)validatedToken;
                 var userId = int.Parse(jwtToken.Claims.First(x => x.Type == "id").Value);
@@ -91,9 +91,11 @@ namespace TrelloC.Authorization
 
             string getUniqueToken()
             {
-                //token is a cryptographically strong random sequence of values
+                //token is a cryptographically strong random sequence of values -
+                //токен — это криптографически стойкая случайная последовательность значений
                 var token = Convert.ToBase64String(RandomNumberGenerator.GetBytes(64));
                 // ensure token is unique by checking against db
+                //убедитесь, что токен уникален, проверив db
                 var tokenIsUnique = !_context.Users.Any(u => u.RefreshTokens.Any(t => t.Token == token));
 
                 if(!tokenIsUnique)

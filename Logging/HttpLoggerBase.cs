@@ -1,8 +1,28 @@
-﻿namespace TrelloC.Logging
+﻿using Microsoft.Extensions.Options;
+using TrelloC.Extensions;
+namespace TrelloC.Logging
 {
     public abstract class HttpLoggerBase : IHttpLogger
     {
-        public abstract void Log(HttpContext context);
+        protected virtual string EnableSettingName { get; }
+        private readonly LoggingCustomSettings _settings;
+        public HttpLoggerBase(IOptions<LoggingCustomSettings> settings)
+        {
+            _settings = settings.Value;
+        }
+        public void Log(HttpContext context)
+        {
+            if (IsEnable())
+            {
+                LogExecuting(context);
+            }
+        }
+        protected abstract void LogExecuting(HttpContext context);
+        protected bool IsEnable() 
+        {
+            return string.IsNullOrEmpty(EnableSettingName) || (bool)_settings.GetPropertyValue<LoggingCustomSettings>(EnableSettingName);
+        }
+        
         protected virtual string GetResposeInfo(HttpResponse context)
         {
             string contextInfo = 

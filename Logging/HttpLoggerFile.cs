@@ -4,26 +4,22 @@ namespace TrelloC.Logging
 {
     public class HttpLoggerFile : HttpLoggerBase
     {
-        private LoggingCustomSettings _settings;
-        public HttpLoggerFile(IOptions<LoggingCustomSettings> settings)
+        public HttpLoggerFile(IOptions<LoggingCustomSettings> settings) : base(settings)
         {
-            _settings = settings.Value;
         }
-        public override void Log(HttpContext context)
+        protected override string EnableSettingName => "LogToFile";
+        protected override void LogExecuting(HttpContext context)
         {
-            if (_settings.LogToFile)
+            try
             {
-                try
-                {
-                    StreamWriter writer = new($"{Environment.CurrentDirectory}\\Logging\\txt\\Logging{DateTime.Now:MM/dd/yyyy}.txt", true);
-                    writer.WriteLine(GetRequestInfo(context.Request) + GetHeadersInfo(context.Request.Headers)
-                        + GetResposeInfo(context.Response) + GetHeadersInfo(context.Response.Headers) + new string('-', 40));
-                    writer.Close();
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.ToString());
-                }
+                StreamWriter writer = new($"{Environment.CurrentDirectory}\\Logging\\txt\\Logging{DateTime.Now:MM/dd/yyyy}.txt", true);
+                writer.WriteLine(GetRequestInfo(context.Request) + GetHeadersInfo(context.Request.Headers)
+                    + GetResposeInfo(context.Response) + GetHeadersInfo(context.Response.Headers) + new string('-', 40));
+                writer.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
             }
         }
         protected string GetHeadersInfo(IHeaderDictionary headersDictionary)

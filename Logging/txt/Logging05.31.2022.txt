@@ -179,3 +179,105 @@ Access-Control-Allow-Origin:  https://localhost:44395
 Access-Control-Allow-Credentials:  true
 Vary:  Origin
 ----------------------------------------
+REQUEST 
+31.05.2022 14:01:04 
+URL: /Users/authenticate 
+Method: POST 
+Body: System.IO.Pipelines.StreamPipeReader 
+Accept:  */*
+Accept-Encoding:  gzip, deflate, br
+Accept-Language:  ru,en;q=0.9,en-GB;q=0.8,en-US;q=0.7
+Connection:  close
+Content-Length:  47
+Content-Type:  application/json
+Cookie:  ai_user=Qk5TG|2022-01-28T12:57:46.582Z; refreshToken=T6r%2FtYpGBCy3gXTMP1PGncbFBwCWOsXRTqIi113Nvs4dfEx0VZDjKNJV5l3GkLEuM635Id7%2F5SgTLSo4bldmrQ%3D%3D
+Host:  localhost:44395
+Referer:  https://localhost:44395/swagger/index.html
+User-Agent:  Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53
+sec-ch-ua:  " Not A;Brand";v="99", "Chromium";v="101", "Microsoft Edge";v="101"
+sec-ch-ua-mobile:  ?0
+sec-ch-ua-platform:  "Windows"
+origin:  https://localhost:44395
+sec-fetch-site:  same-origin
+sec-fetch-mode:  cors
+sec-fetch-dest:  empty
+RESPONSE 
+StatusCode: 400 
+ContentType: application/json 
+Body: System.IO.Pipelines.StreamPipeWriter 
+Content-Type:  application/json
+Access-Control-Allow-Origin:  https://localhost:44395
+Access-Control-Allow-Credentials:  true
+Vary:  Origin
+----------------------------------------
+REQUEST 
+31.05.2022 15:37:45 
+URL: /Users/authenticate 
+Method: POST 
+Body: System.IO.Pipelines.StreamPipeReader 
+Accept:  */*
+Accept-Encoding:  gzip, deflate, br
+Accept-Language:  ru,en;q=0.9,en-GB;q=0.8,en-US;q=0.7
+Connection:  close
+Content-Length:  47
+Content-Type:  application/json
+Cookie:  ai_user=Qk5TG|2022-01-28T12:57:46.582Z; refreshToken=T6r%2FtYpGBCy3gXTMP1PGncbFBwCWOsXRTqIi113Nvs4dfEx0VZDjKNJV5l3GkLEuM635Id7%2F5SgTLSo4bldmrQ%3D%3D
+Host:  localhost:44395
+Referer:  https://localhost:44395/swagger/index.html
+User-Agent:  Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53
+sec-ch-ua:  " Not A;Brand";v="99", "Chromium";v="101", "Microsoft Edge";v="101"
+sec-ch-ua-mobile:  ?0
+sec-ch-ua-platform:  "Windows"
+origin:  https://localhost:44395
+sec-fetch-site:  same-origin
+sec-fetch-mode:  cors
+sec-fetch-dest:  empty
+RESPONSE 
+StatusCode: 400 
+ContentType: application/json 
+Body: System.IO.Pipelines.StreamPipeWriter 
+Content-Type:  application/json
+Access-Control-Allow-Origin:  https://localhost:44395
+Access-Control-Allow-Credentials:  true
+Vary:  Origin
+----------------------------------------
+REQUEST 
+31.05.2022 17:13:03 
+URL: /Users/authenticate 
+Method: POST 
+Body: System.IO.Pipelines.StreamPipeReader 
+Accept:  */*
+Accept-Encoding:  gzip, deflate, br
+Connection:  keep-alive
+Content-Length:  51
+Content-Type:  application/json
+Cookie:  refreshToken=hSJncASwT66YZ41Pl1RVTB3H9%2Fx1RQWtFZXxwMsz8JpmC3lzphC5gD5czKZbSTjhjujGg4RGjfJ%2BSOdTK6cIVg%3D%3D
+Host:  localhost:44395
+User-Agent:  PostmanRuntime/7.29.0
+Postman-Token:  6b25d0b5-7e67-4e1e-acfa-6d0d4a65abc3
+RESPONSE 
+StatusCode: 400 
+ContentType: application/json 
+Body: System.IO.Pipelines.StreamPipeWriter 
+Content-Type:  application/json
+----------------------------------------
+REQUEST 
+31.05.2022 17:20:14 
+URL: /Users/authenticate 
+Method: POST 
+Body: System.IO.Pipelines.StreamPipeReader 
+Accept:  */*
+Accept-Encoding:  gzip, deflate, br
+Connection:  keep-alive
+Content-Length:  51
+Content-Type:  application/json
+Cookie:  refreshToken=hSJncASwT66YZ41Pl1RVTB3H9%2Fx1RQWtFZXxwMsz8JpmC3lzphC5gD5czKZbSTjhjujGg4RGjfJ%2BSOdTK6cIVg%3D%3D
+Host:  localhost:44395
+User-Agent:  PostmanRuntime/7.29.0
+Postman-Token:  a0935b5d-d01a-440f-83de-129b1bf54de8
+RESPONSE 
+StatusCode: 400 
+ContentType: application/json 
+Body: System.IO.Pipelines.StreamPipeWriter 
+Content-Type:  application/json
+----------------------------------------
